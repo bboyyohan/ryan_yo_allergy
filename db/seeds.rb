@@ -6,15 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
+Recipe.destroy_all
+User.destroy_all
+Ingredient.destroy_all
+Allergy.destroy_all
+RecipeIngredient.destroy_all
+
 
 ryan = User.create(username: "Ryan")
 yo = User.create(username: "Yo")
+joe = User.create(username: "Joe")
 
-ramen = Recipe.create(name: "Ramen", user_id: 1)
-pizza = Recipe.create(name: "Pizza", user_id: 2)
-burger = Recipe.create(name: "Burger", user_id: 1)
-taco = Recipe.create(name: "Taco", user_id: 2)
-spaghetti = Recipe.create(name: "Spaghetti", user_id: 1)
+ramen = Recipe.create(name: "Ramen", user_id: ryan.id)
+pizza = Recipe.create(name: "Pizza", user_id: yo.id)
+burger = Recipe.create(name: "Burger", user_id: ryan.id)
+taco = Recipe.create(name: "Taco", user_id: yo.id)
+spaghetti = Recipe.create(name: "Spaghetti", user_id: ryan.id)
 
 noodle = Ingredient.create(name: "Noodle")
 tomato = Ingredient.create(name: "Tomato")

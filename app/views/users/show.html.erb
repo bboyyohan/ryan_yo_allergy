@@ -3,7 +3,13 @@
 <h2>Recipes</h2>
 
 <ul>
-<%@user.recipes.each do |r|%>
+<% @user.recipes.each do |r|%>
     <li> <%=r.name%> </li>
 <%end%>
 </ul>
+
+ <%= form_tag(user_path(@user), method: :delete) do %>
+     <div>
+      <%= submit_tag 'Delete this User' %>
+     </div>
+<% end %>
