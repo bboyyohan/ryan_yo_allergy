@@ -10,13 +10,13 @@
     <%= f.fields_for :ingredients do |i| %>
         <%# <div>Ingredients</div> %>
         <%=i.label "Ingredient #1"%>
-        <%=i.text_field :ingredients%>
+        <%=i.text_field :ingredient1%>
             <br>
         <%=i.label "Ingredient #2"%>
-        <%=i.text_field :ingredients%>
+        <%=i.text_field :ingredient2%>
             <br>
         <%=i.label "Ingredient #3"%>
-        <%=i.text_field :ingredients%>
+        <%=i.text_field :ingredient3%>
     <%end%>
     <br>
     <%=f.submit%>
